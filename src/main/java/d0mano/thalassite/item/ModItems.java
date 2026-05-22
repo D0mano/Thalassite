@@ -2,9 +2,7 @@ package d0mano.thalassite.item;
 
 import d0mano.thalassite.Thalassite;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.ArmorMaterials;
 import net.minecraft.item.equipment.EquipmentAsset;
@@ -34,7 +32,7 @@ public class ModItems {
 
     // -- THALASSITE TOOL MATERIAL CREATION -- //
     public static final ToolMaterial THALASSITE_TOOL_MATERIAL = new ToolMaterial(
-            BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             455,
             5.0F,
             1.5F,
@@ -67,11 +65,20 @@ public class ModItems {
     public static final Item THALASSITE_PICKAXE = registerItem("thalassite_pickaxe",
             settings -> new Item(settings.pickaxe(THALASSITE_TOOL_MATERIAL,1.0f,-2.8f)));
     public static final Item THALASSITE_SHOVEL  = registerItem("thalassite_shovel",
-            settings -> new Item(settings.shovel(THALASSITE_TOOL_MATERIAL,1.5f,-3.0f)));
+            settings -> new ShovelItem(THALASSITE_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f,
+                    settings.shovel(THALASSITE_TOOL_MATERIAL,1.5f,-3.0f)));
     public static final Item THALASSITE_AXE = registerItem("thalassite_axe",
-            settings -> new Item(settings.axe(THALASSITE_TOOL_MATERIAL, 6.5f, -3.0f)));
+            settings -> new AxeItem(THALASSITE_TOOL_MATERIAL,
+                    6.5f,
+                    -3.0f,
+                    settings.axe(THALASSITE_TOOL_MATERIAL, 6.5f, -3.0f)));
     public static final Item THALASSITE_HOE = registerItem("thalassite_hoe",
-            settings -> new Item(settings.hoe(THALASSITE_TOOL_MATERIAL, -3.0f, 0.0f)));
+            settings -> new HoeItem(THALASSITE_TOOL_MATERIAL,
+                    -3.0f,
+                    0.0f,
+                    settings.hoe(THALASSITE_TOOL_MATERIAL, -3.0f, 0.0f)));
 
     // -- ARMOR -- //
     public static final Item THALASSITE_HELMET = registerItem("thalassite_helmet",
