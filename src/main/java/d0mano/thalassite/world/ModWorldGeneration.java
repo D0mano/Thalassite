@@ -3,6 +3,7 @@ package d0mano.thalassite.world;
 import d0mano.thalassite.Thalassite;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

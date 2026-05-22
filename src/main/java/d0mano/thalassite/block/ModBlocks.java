@@ -24,8 +24,8 @@ public class ModBlocks {
                     .hardness(1f)
                     .resistance(1f)
                     .sounds(BlockSoundGroup.STONE)
+                    .luminance(state -> 5)
                     .requiresTool()));
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Thalassite.MOD_ID, name), block);
