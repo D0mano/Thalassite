@@ -21,11 +21,11 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create()
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             Identifier.of(Thalassite.MOD_ID, "thalassite_ore")))
-                    .hardness(0.2f)
+                    .hardness(1f)
                     .resistance(1f)
                     .sounds(BlockSoundGroup.STONE)
+                    .luminance(state -> 5)
                     .requiresTool()));
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Thalassite.MOD_ID, name), block);
