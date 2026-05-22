@@ -1,11 +1,9 @@
 package d0mano.thalassite;
 
+import d0mano.thalassite.block.ModBlocks;
 import d0mano.thalassite.item.ModItems;
+import d0mano.thalassite.world.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +17,7 @@ public class Thalassite implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
         ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
     }
 }
