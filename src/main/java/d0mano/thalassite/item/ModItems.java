@@ -26,6 +26,11 @@ public class ModItems {
 
     public static final Item THALASSITE = registerItem("thalassite",Item::new);
     public static final TagKey<Item> REPAIRS_THALASSITE = TagKey.of(RegistryKeys.ITEM,Identifier.of(Thalassite.MOD_ID,"thalassite_repair"));
+    public static final RegistryKey<EquipmentAsset> THALASSITE_EQUIPMENT_ASSET = RegistryKey.of(
+            RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
+            Identifier.of(Thalassite.MOD_ID, "thalassite")
+    );
+
 
     // -- THALASSITE TOOL MATERIAL CREATION -- //
     public static final ToolMaterial THALASSITE_TOOL_MATERIAL = new ToolMaterial(
@@ -35,7 +40,27 @@ public class ModItems {
             1.5F,
             22,
             REPAIRS_THALASSITE
+
     );
+
+    // -- THALASSITE ARMOR MATERIAL CREATION -- //
+    public static final ArmorMaterial THALASSITE_ARMOR_MATERIAL = new ArmorMaterial(
+            15,
+            Map.of(EquipmentType.HELMET , 4,
+                    EquipmentType.CHESTPLATE,9,
+                    EquipmentType.LEGGINGS,7,
+                    EquipmentType.BOOTS,4
+
+            ),
+            18,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+            3.0f,
+            0.1f,
+            REPAIRS_THALASSITE,
+            THALASSITE_EQUIPMENT_ASSET
+    );
+
+
     // -- TOOLS --//
     public static final Item THALASSITE_SWORD = registerItem("thalassite_sword",
             settings -> new Item(settings.sword(THALASSITE_TOOL_MATERIAL,5.5f,-2.4f)));
@@ -49,6 +74,18 @@ public class ModItems {
             settings -> new Item(settings.hoe(THALASSITE_TOOL_MATERIAL, -3.0f, 0.0f)));
 
     // -- ARMOR -- //
+    public static final Item THALASSITE_HELMET = registerItem("thalassite_helmet",
+            settings -> new Item(settings.armor(THALASSITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item THALASSITE_CHESTPLATE = registerItem("thalassite_chestplate",
+            settings -> new Item(settings.armor(THALASSITE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item THALASSITE_LEGGINGS = registerItem("thalassite_leggings",
+            settings -> new Item(settings.armor(THALASSITE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item THALASSITE_BOOTS = registerItem("thalassite_boots",
+            settings -> new Item(settings.armor(THALASSITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+
+
+
 
     private static Item registerItem(String name,Function<Item.Settings,Item> factory){
         Identifier item_ID = Identifier.of(Thalassite.MOD_ID, name);
@@ -74,6 +111,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries ->{
             entries.add(THALASSITE_SWORD);
             entries.add(THALASSITE_AXE);
+            entries.add(THALASSITE_HELMET);
+            entries.add(THALASSITE_CHESTPLATE);
+            entries.add(THALASSITE_LEGGINGS);
+            entries.add(THALASSITE_BOOTS);
         });
 
     }

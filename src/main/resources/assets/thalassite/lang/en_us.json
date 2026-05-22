@@ -5,6 +5,10 @@
   "item.thalassite.thalassite_axe": "Thalassite Axe",
   "item.thalassite.thalassite_shovel": "Thalassite Shovel",
   "item.thalassite.thalassite_hoe": "Thalassite Hoe",
+  "item.thalassite.thalassite_helmet" : "Thalassite Helmet",
+  "item.thalassite.thalassite_chestplate" : "Thalassite Chestplate",
+  "item.thalassite.thalassite_leggings" : "Thalassite Leggings",
+  "item.thalassite.thalassite_boots" : "Thalassite Boots",
   "item.thalassite.thalassite_ore": "Thalassite Ore",
   "block.thalassite.thalassite_ore": "Thalassite Ore"
 }

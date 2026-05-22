@@ -1,10 +1,14 @@
 {
   "item.thalassite.thalassite": "Thalassite",
-  "item.thalassite.thalassite_sword": "Épee en Thalassite",
-  "item.thalassite.thalassite_pickaxe": "Pioche en Thalassite",
-  "item.thalassite.thalassite_axe": "Hache en Thalassite",
-  "item.thalassite.thalassite_shovel": "Pelle en Thalassite",
-  "item.thalassite.thalassite_hoe": "Houe en Thalassite",
-  "item.thalassite.thalassite_ore": "Minerai de Thalassite",
-  "block.thalassite.thalassite_ore": "Minerai de Thalassite"
+  "item.thalassite.thalassite_sword": "Épee en thalassite",
+  "item.thalassite.thalassite_pickaxe": "Pioche en thalassite",
+  "item.thalassite.thalassite_axe": "Hache en thalassite",
+  "item.thalassite.thalassite_shovel": "Pelle en thalassite",
+  "item.thalassite.thalassite_hoe": "Houe en thalassite",
+  "item.thalassite.thalassite_helmet" : "Casque en thalassite",
+  "item.thalassite.thalassite_chestplate" : "Plastron en thalassite",
+  "item.thalassite.thalassite_leggings" : "Jambières en thalassite",
+  "item.thalassite.thalassite_boots" : "Bottes en thalassite",
+  "item.thalassite.thalassite_ore": "Minerai de thalassite",
+  "block.thalassite.thalassite_ore": "Minerai de thalassite"
 }
