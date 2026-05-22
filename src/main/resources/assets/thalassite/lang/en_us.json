@@ -1,5 +1,10 @@
 {
   "item.thalassite.thalassite": "Thalassite",
+  "item.thalassite.thalassite_sword": "Thalassite Sword",
+  "item.thalassite.thalassite_pickaxe": "Thalassite Pickaxe",
+  "item.thalassite.thalassite_axe": "Thalassite Axe",
+  "item.thalassite.thalassite_shovel": "Thalassite Shovel",
+  "item.thalassite.thalassite_hoe": "Thalassite Hoe",
   "item.thalassite.thalassite_ore": "Thalassite Ore",
   "block.thalassite.thalassite_ore": "Thalassite Ore"
 }
