@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item THALASSITE_INGOT = registerItem("thalassite");
+    public static final Item THALASSITE = registerItem("thalassite");
 
 
     private static Item registerItem(String name){
@@ -26,7 +26,7 @@ public class ModItems {
         Thalassite.LOGGER.info("Registering the mod Items for"+Thalassite.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->{
-            entries.add(THALASSITE_INGOT);
+            entries.add(THALASSITE);
         });
 
     }
