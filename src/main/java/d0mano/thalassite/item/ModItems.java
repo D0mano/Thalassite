@@ -26,7 +26,6 @@ public class ModItems {
 
     public static final Item THALASSITE = registerItem("thalassite",Item::new);
     public static final TagKey<Item> REPAIRS_THALASSITE = TagKey.of(RegistryKeys.ITEM,Identifier.of(Thalassite.MOD_ID,"thalassite_repair"));
-    public static final TagKey<EquipmentAsset> THALASSITE_ARMOR_MATERIAL_KEY = TagKey.of(RegistryKeys.ITEM,Identifier.of)
 
     // -- THALASSITE TOOL MATERIAL CREATION -- //
     public static final ToolMaterial THALASSITE_TOOL_MATERIAL = new ToolMaterial(
@@ -37,14 +36,6 @@ public class ModItems {
             22,
             REPAIRS_THALASSITE
     );
-
-
-    private static Item registerItem(String name){
-        Identifier Item_ID = Identifier.of(Thalassite.MOD_ID, name);
-        RegistryKey<Item> Item_KEY = RegistryKey.of(RegistryKeys.ITEM, Item_ID);
-        Item Item = new Item(new Item.Settings().registryKey(Item_KEY));
-
-
     // -- TOOLS --//
     public static final Item THALASSITE_SWORD = registerItem("thalassite_sword",
             settings -> new Item(settings.sword(THALASSITE_TOOL_MATERIAL,5.5f,-2.4f)));
@@ -58,10 +49,6 @@ public class ModItems {
             settings -> new Item(settings.hoe(THALASSITE_TOOL_MATERIAL, -3.0f, 0.0f)));
 
     // -- ARMOR -- //
-
-
-
-
 
     private static Item registerItem(String name,Function<Item.Settings,Item> factory){
         Identifier item_ID = Identifier.of(Thalassite.MOD_ID, name);
