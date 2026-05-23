@@ -10,5 +10,7 @@
   "item.thalassite.thalassite_leggings" : "Jambières en thalassite",
   "item.thalassite.thalassite_boots" : "Bottes en thalassite",
   "item.thalassite.thalassite_ore": "Minerai de thalassite",
-  "block.thalassite.thalassite_ore": "Minerai de thalassite"
+  "block.thalassite.thalassite_ore": "Minerai de thalassite",
+  "advancements.thalassite.root.title": "L'Appel des Profondeurs",
+  "advancements.thalassite.root.description": "L'aventure de la Thalassite commence ici."
 }

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "thalassite:thalassite"
+    },
+    "title": {
+      "translate": "advancements.thalassite.root.title"
+    },
+    "description": {
+      "translate": "advancements.thalassite.root.description"
+    },
+    "background": "minecraft:textures/block/ocean_lantern_texture.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_thalassite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "thalassite:thalassite"
+          }
+        ]
+      }
+    }
+  }
+}

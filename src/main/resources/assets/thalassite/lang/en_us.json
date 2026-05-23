@@ -10,5 +10,7 @@
   "item.thalassite.thalassite_leggings" : "Thalassite Leggings",
   "item.thalassite.thalassite_boots" : "Thalassite Boots",
   "item.thalassite.thalassite_ore": "Thalassite Ore",
-  "block.thalassite.thalassite_ore": "Thalassite Ore"
+  "block.thalassite.thalassite_ore": "Thalassite Ore",
+  "advancements.thalassite.root.title": "Deep's calling",
+  "advancements.thalassite.root.description": "The Thalassite adventure starts now"
 }

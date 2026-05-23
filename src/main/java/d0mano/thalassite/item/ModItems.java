@@ -4,7 +4,6 @@ import d0mano.thalassite.Thalassite;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.item.equipment.ArmorMaterials;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -106,22 +105,24 @@ public class ModItems {
         Thalassite.LOGGER.info("Registering the mod Items for"+Thalassite.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->{
-            entries.add(THALASSITE);
+            entries.addAfter(Items.DIAMOND,THALASSITE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries ->{
-            entries.add(THALASSITE_PICKAXE);
-            entries.add(THALASSITE_AXE);
-            entries.add(THALASSITE_SHOVEL);
-            entries.add(THALASSITE_HOE);
+            entries.addAfter(Items.DIAMOND_HOE,
+                    THALASSITE_SHOVEL,
+                    THALASSITE_PICKAXE,
+                    THALASSITE_AXE,
+                    THALASSITE_HOE);
 
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries ->{
-            entries.add(THALASSITE_SWORD);
-            entries.add(THALASSITE_AXE);
-            entries.add(THALASSITE_HELMET);
-            entries.add(THALASSITE_CHESTPLATE);
-            entries.add(THALASSITE_LEGGINGS);
-            entries.add(THALASSITE_BOOTS);
+            entries.addAfter(Items.DIAMOND_SWORD,THALASSITE_SWORD);
+            entries.addAfter(Items.DIAMOND_AXE,THALASSITE_AXE);
+            entries.addAfter(Items.DIAMOND_BOOTS,
+                    THALASSITE_HELMET,
+                    THALASSITE_CHESTPLATE,
+                    THALASSITE_LEGGINGS,
+                    THALASSITE_BOOTS);
         });
 
     }
